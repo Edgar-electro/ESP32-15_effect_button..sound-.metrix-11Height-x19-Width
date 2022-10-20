@@ -7,3 +7,4 @@ board core  2.01
 led pin d5
 mic pin d35
 button pin d4
+100-13000 HZ
