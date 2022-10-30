@@ -146,7 +146,7 @@ CRGBPalette16 markPal = mark_gp;
 
 uint8_t colorTimer = 0;
 
-// FastLED_NeoMaxtrix - see https://github.com/marcmerlin/FastLED_NeoMatrix for Tiled Matrixes, Zig-Zag and so forth
+// cheng your position metrix ..FastLED_NeoMaxtrix - see https://github.com/marcmerlin/FastLED_NeoMatrix for Tiled Matrixes, Zig-Zag and so forth
 FastLED_NeoMatrix *matrix = new FastLED_NeoMatrix(leds, kMatrixWidth, kMatrixHeight,
   NEO_MATRIX_BOTTOM        + NEO_MATRIX_LEFT +
   NEO_MATRIX_COLUMNS       + NEO_MATRIX_ZIGZAG +
@@ -220,7 +220,7 @@ void loop() {
     if (vReal[i] > NOISE) {                    // Add a crude noise filter
 
    
-        //19 bands, 12kHz top band  
+        //19 bands, 15 kHz  40000 frequenci   512 bit  samples
       if (         i<=2  ) bandValues[0]  += (int)vReal[i];
       if (i>2   && i<=3  ) bandValues[1]  += (int)vReal[i];
       if (i>3   && i<=4  ) bandValues[2]  += (int)vReal[i];
@@ -244,7 +244,7 @@ void loop() {
       
       
      /*   //19 bands, 12kHz top band  //512 bit   30000 freqency
-      if (         i<=2  )           bandValues[0]  += (int)vReal[i];
+      if (         i<=2  ) bandValues[0]  += (int)vReal[i];
       if (i>2   && i<=3  ) bandValues[1]  += (int)vReal[i];
       if (i>3   && i<=4  ) bandValues[2]  += (int)vReal[i];
       if (i>4   && i<=5  ) bandValues[3]  += (int)vReal[i];
